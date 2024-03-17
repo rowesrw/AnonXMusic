@@ -13,7 +13,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@app.on_message(filters.command(["/song","يوت", "تنزيل"])
+@app.on_message(filters.command(["/song","يوت", "تنزيل"]))
 def song(_, message, client):
 
 

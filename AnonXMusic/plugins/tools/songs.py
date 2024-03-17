@@ -14,7 +14,7 @@ def time_to_seconds(time):
 
 
 @app.on_message(filters.group(["بحث","تنزيل", f"يوت"]))
-def song(_, message):
+def song(_, message, bool):
 
     user_id = message.from_user.id
     user_name = message.from_user.first_name

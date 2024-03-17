@@ -14,7 +14,7 @@ def time_to_seconds(time):
 
 
 @app.on_message(filters.command(["/song","يوت", "تنزيل"]))
-def song(_, message, client):
+def song(_, message):
 
 
 

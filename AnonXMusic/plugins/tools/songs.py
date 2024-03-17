@@ -5,7 +5,7 @@ import yt_dlp
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 from AnonXMusic import app
-from strings.filters import command
+from pyrogram import filters 
 
 
 def time_to_seconds(time):

@@ -13,7 +13,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@app.on_message(filters.command(["بحث","تنزيل", f"يوت"]))
+@app.on_message(filters.group(["بحث","تنزيل", f"يوت"]))
 def song(_, message):
 
     user_id = message.from_user.id

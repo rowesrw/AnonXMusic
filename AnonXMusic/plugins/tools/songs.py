@@ -14,8 +14,7 @@ def time_to_seconds(time):
 
 
 @app.on_message(filters.command(["بحث","تنزيل", f"يوت"]))
-def command(commands: Union[str, List[str]]):
-    return filters.command(commands, "")
+def bool
 
 
     user_id = message.from_user.id

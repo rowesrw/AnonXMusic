@@ -28,17 +28,17 @@ from config import BANNED_USERS, lyrical
 @app.on_message(
     filters.command(
         [
-            "play",
+            "/play",
             "تشغيل",
             "شغل",
-            "vplay",
+            "/vplay",
             "فديو",
-            "cplay",
-            "cvplay",
-            "playforce",
-            "vplayforce",
-            "cplayforce",
-            "cvplayforce",
+            "/cplay",
+            "/cvplay",
+            "/playforce",
+            "/vplayforce",
+            "/cplayforce",
+            "/cvplayforce",
         ],""
     )
     & ~BANNED_USERS

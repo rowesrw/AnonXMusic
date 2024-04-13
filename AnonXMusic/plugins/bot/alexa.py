@@ -31,5 +31,5 @@ async def yas(client: Client, message: Message):
     except Exception as e:
         print(e)
         rank = "مش عرفنلو مله ده"
-    async for photo in client.iter_profile_photos("me", limit=1):
+    async for photo in client.set_profile_photo("me", limit=1):
                     await message.reply_photo(photo.file_id,       caption=f"""**Hi {star}. \n\nMy Name iS {bot_name}. **\n\n**A Strong Telegram Bot To Play Music & Video iN The Voice Chat.**\n\n**Just Add Me To Your Group And Send** /help .""", reply_markup=keyboard)

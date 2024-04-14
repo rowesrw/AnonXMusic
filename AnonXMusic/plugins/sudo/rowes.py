@@ -80,6 +80,9 @@ async def yas(client, message):
 
 
 @app.on_message(
+    command(["بوت"])
+    & filters.group
+)
     casync def yas(client, message):
     photo = await app.download_media(client.me.photo.big_file_id)
     await message.reply_photo(photo, caption=f"Hi My iS {client.me.first_name}\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", 

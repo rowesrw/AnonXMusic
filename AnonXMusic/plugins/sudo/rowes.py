@@ -77,6 +77,25 @@ async def yas(client, message):
             ]
         ),
     )
+  @app.on_message(
+    command(["بوت"])
+    & filters.group
+)
+async def yas(client, message):
+    usr = await client.get_chat("AIleXaBoT")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"Hi My Name iS AleXa\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", ", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
+
 
 @app.on_message(
     command(["محمد","جينيص","GENIUS ","Genius"])

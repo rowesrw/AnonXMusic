@@ -14,6 +14,7 @@ from AnonXMusic import app
                 
 @app.on_message(
     command(["سورس","المطور"])
+    & filters.group
     & ~filters.edited
 )
 async def huhh(client: Client, message: Message):

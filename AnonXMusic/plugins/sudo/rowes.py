@@ -48,7 +48,7 @@ async def yas(client, message):
     usr = await client.get_chat("DaRrKNneSs_1")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
+    await message.reply_photo(photo,       caption=f"\nNamE : {name}\nUseR : @{usr.username}\niD : {usr.id}\nBiO : {usr.bio}\n\n", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -67,7 +67,7 @@ async def yas(client, message):
     usr = await client.get_chat("R7_OX")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
+    await message.reply_photo(photo,       caption=f"\nNamE : {name}\nUseR : @{usr.username}\niD : {usr.id}\nBiO : {usr.bio}\n\n", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -87,12 +87,12 @@ async def yas(client, message):
     usr = await client.get_chat("AIleXaBoT")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**Hi My Name iS {MUSIC_BOT_NAME}**\n\n**A Strong Telegram Bot To Play Music & Video iN The Voice Chat.**\n\n**Just Add Me To Your Group And Send** /help .", 
+    await message.reply_photo(photo,       caption=f"**Hi My Name iS AleXa\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✚ Add me to your Group", url=f"https://t.me/A_N_DBOT?startgroup=True"), 
+                        "✚ Add me to your Group", url=f"https://t.me/AILEXABOT?startgroup=True"), 
                  ],[
                 
                     InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def yas(client, message):
     usr = await client.get_chat("gs_y0")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
+    await message.reply_photo(photo,       caption=f"\nNamE : {name}\nUseR : @{usr.username}\niD : {usr.id}\nBiO : {usr.bio}\n\n", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -132,7 +132,7 @@ async def yas(client, message):
     usr = await client.get_chat("QIIIlIP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
+    await message.reply_photo(photo,       caption=f"\nNamE : {name}\nUseR : @{usr.username}\niD : {usr.id}\nBiO : {usr.bio}\n\n", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [

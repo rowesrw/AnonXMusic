@@ -80,30 +80,25 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["بوت"])
-    & filters.group
-)
-async def yas(client, message):
-    usr = await client.get_chat("AIleXaBoT")
-    name = usr.first_name
-    photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"Hi My {name} iS AleXa\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", 
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "✚ Add me to your Group", url=f"https://t.me/{usr.username}?startgroup=True"), 
-                 ],[
-                
-                    InlineKeyboardButton(
-                        ": ChanneL .", url=f"https://t.me/RQ_SF"),
-                ],
+    casync def yas(client, message):
+    photo = await app.download_media(client.me.photo.big_file_id)
+    await message.reply_photo(photo, caption=f"Hi My iS {client.me.first_name}\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "✚ Add me to your Group", url=f"https://t.me/{client.me.username}?startgroup=True"), 
+                 ],[
+                
+                    InlineKeyboardButton(
+                        ": ChanneL .", url=f"https://t.me/RQ_SF"),
+                ],
 
-            ]
+            ]
 
-        ),
+        ),
 
-)
+    )
 @app.on_message(
     command(["محمد","جينيص","GENIUS ","Genius"])
     & filters.group

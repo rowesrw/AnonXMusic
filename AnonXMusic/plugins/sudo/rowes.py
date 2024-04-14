@@ -84,7 +84,7 @@ async def yas(client, message):
     & filters.group
 )
 async def yas(client, message):
-    usr = await client.get_chat(client.me.username)
+    usr = await client.get_chat(app.username)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"Hi My {name} iS AleXa\n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .", 
@@ -92,7 +92,7 @@ async def yas(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "✚ Add me to your Group", url=f"https://t.me/{client.me.username}?startgroup=True"), 
+                        "✚ Add me to your Group", url=f"https://t.me/{usr.username}?startgroup=True"), 
                  ],[
                 
                     InlineKeyboardButton(

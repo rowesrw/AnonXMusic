@@ -77,7 +77,7 @@ async def yas(client, message):
             ]
         ),
     )
-  @app.on_message(
+@app.on_message(
     command(["بوت"])
     & filters.group
 )
@@ -95,7 +95,6 @@ async def yas(client, message):
             ]
         ),
     )
-
 
 @app.on_message(
     command(["محمد","جينيص","GENIUS ","Genius"])

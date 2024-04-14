@@ -15,7 +15,6 @@ from AnonXMusic import app
 @app.on_message(
     command(["سورس","المطور"])
     & filters.group
-    & ~filters.edited
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
@@ -44,7 +43,6 @@ async def huhh(client: Client, message: Message):
 @app.on_message(
     command(["سيمو","اسلام","عم الكون","Simo","SIMO","eslam","ESLAM","المطور اسلام"])
     & filters.group
-    & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("DaRrKNneSs_1")
@@ -64,7 +62,6 @@ async def yas(client, message):
 @app.on_message(
     command(["رويس","رويس باشا","روس","RoWeS","ROWES","rowes","Rowes","المطور رويس"])
     & filters.group
-    & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("R7_OX")
@@ -85,7 +82,6 @@ async def yas(client, message):
 @app.on_message(
     command(["بوت","اليكسا"])
     & filters.group
-    & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("AIleXaBoT")
@@ -112,7 +108,6 @@ async def yas(client, message):
 @app.on_message(
     command(["محمد","جينيص","GENIUS ","Genius"])
     & filters.group
-    & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("gs_y0")
@@ -132,7 +127,6 @@ async def yas(client, message):
 @app.on_message(
     command(["رعد","الراعي","محمد عثمان"])
     & filters.group
-    & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("QIIIlIP")

@@ -13,11 +13,6 @@ from youtube_search import YoutubeSearch
 
 from AnonXMusic import app
 
-def remove_if_exists(path):
-    if os.path.exists(path):
-        os.remove(path)
-
-
 @app.on_message(filters.command(["/song", "بحث", "تحميل", "يوت"], ""))
 async def song_downloader(client, message: Message):
     query = " ".join(message.command[1:])
@@ -50,7 +45,7 @@ async def song_downloader(client, message: Message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"• Uploader By @{app.username} ."
+        rep = f"• Uploader @{app.username} ."
         host = str(info_dict["uploader"])
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
@@ -69,10 +64,4 @@ async def song_downloader(client, message: Message):
 
     except Exception as e:
         await m.edit(" error, wait for bot owner to fix")
-        print(e)
-
-    try:
-        remove_if_exists(audio_file)
-        remove_if_exists(thumb_name)
-    except Exception as e:
         print(e)

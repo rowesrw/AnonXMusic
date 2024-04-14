@@ -110,7 +110,7 @@ async def yas(client, message):
     & filters.group
 )
 async def yas(client, message):
-    usr = await client.get_chat("gs_y0")
+    usr = await client.get_chat("gs_y1")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"\nNamE : {name}\nUseR : @{usr.username}\niD : {usr.id}\nBiO : {usr.bio}\n\n", 

@@ -2,6 +2,8 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
+import config
+
 from AnonXMusic.utils.formatters import time_to_seconds
 
 

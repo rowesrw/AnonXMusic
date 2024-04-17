@@ -5,9 +5,9 @@ from pyrogram.enums import ChatMemberStatus, ChatMemberStatus
 
 
 iddof = []
-@Client.on_message(filters.command(["تعطيل الايدي", "قفل الايدي"], "")& filters.group)
+@app.on_message(filters.command(["تعطيل الايدي", "قفل الايدي"], "")& filters.group)
 async def iddlock(client: Client, message):
-   get = await client.get_chat_member(message.chat.id, message.from_user.id)  
+   get = await app.get_chat_member(message.chat.id, message.from_user.id)  
    if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
       if message.chat.id in iddof:
         return await message.reply_text("الامر معطل من قبل .")

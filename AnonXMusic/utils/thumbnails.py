@@ -81,7 +81,7 @@ async def gen_thumb(videoid):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (5, 5), f"@R7_OX", fill="white", font=name_font
+            (5, 5), f"AleXa", fill="white", font=name_font
         )
         draw.text(
             (600, 150),
@@ -136,4 +136,6 @@ async def gen_thumb(videoid):
         except:
             pass
         background.save(f"cache/{videoid}.png")
-      
+        return f"cache/{videoid}.png"
+    except Exception:
+        return YOUTUBE_IMG_URL

@@ -136,4 +136,4 @@ async def gen_thumb(videoid):
         except:
             pass
         background.save(f"cache/{videoid}.png")
-        return f"cache/{videoid}.png"
+      

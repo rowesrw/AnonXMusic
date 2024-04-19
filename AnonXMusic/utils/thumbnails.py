@@ -131,11 +131,3 @@ async def get_thumb(videoid):
             (255, 255, 255),
             font=arial,
         )
-        try:
-            os.remove(f"cache/thumb{videoid}.png")
-        except:
-            pass
-        background.save(f"cache/{videoid}.png")
-        return f"cache/{videoid}.png"
-    except Exception:
-        return YOUTUBE_IMG_URL

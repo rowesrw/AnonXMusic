@@ -838,4 +838,4 @@ async def zahrafa(c: Client, m: Message):
                  + "`\n\n` " + zhrf9 + random.choice(Emoje) \
                  + "`\n\n` " + zhrf5 + random.choice(Emoje)
     Text_Zhrfa = Text_Zhrfa + "`\n\n اضغط علـي الاسـم ليـتم النـسخ \n│ \n🐉"
-    await m.reply_text(Text_Zhrfa, reply_to_message_id=m.message_id, parse_mode="Markdown")
+    await m.reply_text(Text_Zhrfa, parse_mode="Markdown")

@@ -43,7 +43,8 @@ from config import BANNED_USERS, lyrical
             "/cvplayforce",
         ],""
     )
-    & ~BANNED_USERS & ~subscribed
+    & subscribed
+    & ~BANNED_USERS
 )
 @PlayWrapper
 async def play_commnd(

@@ -25,25 +25,6 @@ from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
-
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(
-                text="اشترك هنا", url="https://t.me/vc_xm"
-            ),                        
-        ],        
-    ]
-)
-
-async def check_is_joined(message):    
-    try:
-        userid = message.from_user.id
-        status = await app.get_chat_member("vc_xm", userid)
-        return True
-    except Exception:
-        await message.reply_text("*انت لست مشترك في قناة البوت @vc_xm ** \n**انضم لتستطيع تشغيل الاغاني**",reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
-        return False
         
 @app.on_message(
     filters.command(
@@ -62,6 +43,7 @@ async def check_is_joined(message):
         ],""
     )
     & ~BANNED_USERS
+    & ~subscribed
 )
 @PlayWrapper
 async def play_commnd(

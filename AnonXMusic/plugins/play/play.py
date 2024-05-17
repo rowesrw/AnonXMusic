@@ -29,7 +29,7 @@ from config import BANNED_USERS, lyrical
 force_btn = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(
+            InlineKeyboardMarkup(
                 text="اشترك هنا", url="https://t.me/vc_xm"
             ),                        
         ],        

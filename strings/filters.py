@@ -3,6 +3,7 @@ from pyrogram import filters
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import UserNotParticipant
+from AnonXMusic import app
 
 channel = "vc_xm" # Your Channel
 async def subscription(_, __: Client, message: Message):

@@ -23,6 +23,12 @@ REPLY_MESSAGE_BUTTONS = [
 
           [
 
+             ("‹ سورس ›"),
+
+             ("‹ رويس ›")
+          ],
+          [
+
              ("‹ غنيلي ›"),
 
              ("‹ شعر ›")
@@ -67,35 +73,11 @@ REPLY_MESSAGE_BUTTONS = [
             ("‹ لوكيت ›")
               
           ],
+          
           [
-            ("‹ افتارات سينمائية ›"),
-
-            ("‹ افتارات فنانين ›")
-              
+            ("‹ افلام ›")             
           ],
-          [
-            ("‹ افلام ›"),
-
-            ("‹ قيفات كوكسال ›")
-              
-          ],
-          [
-            ("‹ قيفات شباب ›"),
-
-            ("‹ قيفات بنات ›")
-              
-          ],
-          [
-            ("‹ قيفات قطط ›"),
-
-            ("‹ قيفات اطفال ›")
-              
-          ],
-          [
-            ("‹ قيفات رومانسية ›"),
-
-            ("‹ قيفات كيبوب ›")
-          ],
+          
           [
              ("‹ اخفاء الكيبورد ›")
 
@@ -108,7 +90,7 @@ REPLY_MESSAGE_BUTTONS = [
 
   
 
-@app.on_message(filters.regex("^/cmds$") & filters.private)
+@app.on_message(filters.regex("^/AleXa$") & filters.private)
 async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)

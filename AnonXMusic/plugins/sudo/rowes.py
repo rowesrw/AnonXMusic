@@ -13,7 +13,7 @@ from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AnonXMusic import app
                 
 @app.on_message(
-    command(["سورس","المطور"])
+    command(["سورس","‹ سورس ›"])
     & filters.group
 )
 async def huhh(client: Client, message: Message):
@@ -31,7 +31,7 @@ async def huhh(client: Client, message: Message):
                 ],[
                 
                     InlineKeyboardButton(
-                        ": ChanneL .", url=f"https://t.me/RQ_SF"),
+                        ": ChanneL .", url=f"https://t.me/vc_xm"),
                 ],
 
             ]

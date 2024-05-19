@@ -43,7 +43,6 @@ from config import BANNED_USERS, lyrical
             "/cvplayforce",
         ],""
     )
-    & subscribed
     & ~BANNED_USERS
 )
 @PlayWrapper

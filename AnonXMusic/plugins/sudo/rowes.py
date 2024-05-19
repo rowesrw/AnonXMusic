@@ -15,7 +15,7 @@ from AnonXMusic import app
 @app.on_message(
     command(["سورس","‹ سورس ›"])
     & filters.group
-    & ~filters.private
+    & filters.private
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(

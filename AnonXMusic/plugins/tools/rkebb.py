@@ -12,7 +12,37 @@ from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AnonXMusic import app
 from random import  choice, randint
 
+@Client.on_message(
+    filters.command(["/alive", "معلومات", "سورس", "السورس", "‹ سورس ›"], "")
+)
+async def alive(client: Client, message):
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/R3_QX"),
+                InlineKeyboardButton("𝐜𝐡𝐧𝐧𝐞𝐥", url=f"https://t.me/vc_xm"),
+            ],
+            [
+                 InlineKeyboardButton(f"𖡄͡𝗥͜𝗼͡𝗪͡𝗲͜𝗦", url=f"https://t.me/R7_OX")
+            ],
+            [ 
+                 InlineKeyboardButton("اضف البوت الي مجموعتك 💎", url="https://t.me/AIleXaBoT?startgroup=true")
+            ]
+        ]
+    )
 
+    alive = f"""╭──── • ◈ • ────╮
+么 [𝑫𝒆𝒗 𝒔𝒐𝒖𝒓𝒄𝒆](https://t.me/R7_OX).
+么 [𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆](https://t.me/vc_xm).
+么 [𝑮𝒓𝒐𝒖𝒑 𝒔𝒐𝒖𝒓𝒄𝒆](https://t.me/R3_QX).
+╰──── • ◈ • ────╯
+🚦𝑻𝒉𝒆 𝒃𝒆𝒔𝒕 𝒔𝒐𝒖𝒓𝒄𝒆 𝒕𝒆𝒍𝒆𝒈𝒓𝒂𝒎 ."""
+
+    await message.reply_photo(
+        photo=f"https://graph.org/file/1c56d17360df91a46cd72.jpg",
+        caption=alive,
+        reply_markup=keyboard,
+    )
 
 @app.on_message(command(["غنيلي", "غني", "‹ غنيلي ›", "غنيي"]))
 async def ihd(client: Client, message: Message):

@@ -13,8 +13,8 @@ from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AnonXMusic import app
                 
 @app.on_message(
-    command(["سورس","‹ سورس ›"])
-    & filters.group & filters.private
+    command(["سورس"])
+  & filters.group & ~filters.private
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(

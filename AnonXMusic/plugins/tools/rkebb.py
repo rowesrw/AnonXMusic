@@ -12,6 +12,52 @@ from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AnonXMusic import app
 from random import  choice, randint
 
+@app.on_message(
+    command(["سورس","السورس","‹ سورس ›"])
+    & filters.group
+    & ~filters.edited
+)
+@app.on_message(
+    command(["سورس","السورس","‹ سورس ›"])
+    & filters.channel
+    & ~filters.edited
+)
+@app.on_message(
+    command(["سورس","السورس","‹ سورس ›","قناة","قناه"])
+    & filters.private
+    & ~filters.edited
+)
+async def khalid(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/99853ed28bfc7bb217c94.jpg",
+        caption=f"""╭──── • ◈ • ────╮
+么 [َ ChanneL .](t.me/vc_xm)
+么 [َ RoWeS .](t.me/R7_OX)
+么 [َ SupporT .](t.me/R3_QX)
+╰──── • ◈ • ────╯
+⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼""",
+        reply_markup=InlineKeyboardMarkup(
+        [
+            [
+                    InlineKeyboardButton(
+                        "‹ 𖡄͡𝗥͜𝗼͡𝗪͡𝗲͜𝗦 › ", url=f"https://t.me/R7_OX"),
+                ],[
+                    InlineKeyboardButton(
+                        "‹ ChanneL .›", url=f"https://t.me/vc_xm"), 
+                    InlineKeyboardButton(
+                        "‹ SupporT .›", url=f"https://t.me/R3_QX"),
+                ],[
+                    InlineKeyboardButton(
+                        "‹ اضف البوت لمجموعتك ›", url=f"https://t.me/AIleXaBoT?startgroup=true"),
+            ]
+        ]
+         ),
+     )
+  
+
+
+
+
 @app.on_message(command(["غنيلي", "غني", "‹ غنيلي ›", "غنيي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)

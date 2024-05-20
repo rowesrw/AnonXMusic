@@ -13,34 +13,6 @@ from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AnonXMusic import app
                 
 @app.on_message(
-    command(["سورس"])
-  & filters.group & ~filters.private
-)
-async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://graph.org/file/bac1995241de705f8fc5c.jpg",
-        caption=f"""مرحبا بك عزيزي {message.from_user.mention} \nللتحدث مع مطور البوت اضغط علي الازرار بالاسفل👇""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        ": 𝗥͜𝗼͡𝗪͡𝗲͜𝗦 💸⤸ ᳒", url=f"https://t.me/R7_OX"), 
-                 ],[
-                    InlineKeyboardButton(
-                        ": GrouP .", url=f"https://t.me/R3_QX"),
-                ],[
-                
-                    InlineKeyboardButton(
-                        ": ChanneL .", url=f"https://t.me/vc_xm"),
-                ],
-
-            ]
-
-        ),
-
-    )
-
-@app.on_message(
     command(["سيمو","اسلام","عم الكون","Simo","SIMO","eslam","ESLAM","المطور اسلام"])
     & filters.group
 )
@@ -60,8 +32,12 @@ async def yas(client, message):
     )
 
 @app.on_message(
-    command(["رويس","رويس باشا","روس","RoWeS","ROWES","rowes","Rowes","المطور رويس"])
+    command(["رويس","روس","RoWeS","ROWES","rowes","Rowes"])
     & filters.group
+)
+@app.on_message(
+    command(["‹ رويس ›"])
+    & filters.private 
 )
 async def yas(client, message):
     usr = await client.get_chat("R7_OX")

@@ -27,12 +27,7 @@ from random import  choice, randint
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/99853ed28bfc7bb217c94.jpg",
-        caption=f"""╭──── • ◈ • ────╮
-么 (ChanneL)[t.me/vc_xm]
-么 [َRoWeS](t.me/R7_OX)
-么 [َSupporT](t.me/R3_QX)
-╰──── • ◈ • ────╯
-⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼""",
+        caption=f""": 𝗧𝗵𝗲 𝗕𝗲𝘀𝘁 𝗦𝗼𝗿𝗰𝗲 𝗢𝗻 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 .""",
         reply_markup=InlineKeyboardMarkup(
         [
             [

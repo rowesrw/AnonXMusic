@@ -28,7 +28,7 @@ async def khalid(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/99853ed28bfc7bb217c94.jpg",
         caption=f"""╭──── • ◈ • ────╮
-么 [َChanneL](t.me/vc_xm)
+么 (ChanneL)[t.me/vc_xm]
 么 [َRoWeS](t.me/R7_OX)
 么 [َSupporT](t.me/R3_QX)
 ╰──── • ◈ • ────╯

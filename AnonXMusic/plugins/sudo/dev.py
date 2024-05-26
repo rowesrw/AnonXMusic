@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AnonXMusic import app 
 import os
 
-@Client.on_message(filters.command(["المطور", "مطور","مطور البوت"], ""))
+@Client.on_message(filters.command(["المطور", "مطور","مطور البوت"], "") & filters.group )  
 async def dev(client: Client, message: Message):
      if await joinch(message):
             return

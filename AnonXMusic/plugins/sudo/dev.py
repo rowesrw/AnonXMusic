@@ -2,9 +2,10 @@ import random
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from strings.filters import command
+from AnonXMusic import app 
 import os
 
-@Client.on_message(filters.command(["المطور", "مطور","مطور البوت"], "") & filters.group )  
+@app.on_message(filters.command(["المطور", "مطور","مطور البوت"], "") & filters.group )  
 async def dev(client: Client, message: Message):
      if await joinch(message):
             return

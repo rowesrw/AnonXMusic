@@ -7,7 +7,7 @@ import os
 
 @app.on_message(filters.command(["المطور", "مطور","مطور البوت"], "") & filters.group )  
 async def dev(client: Client, message: Message):
-     if await (message):
+
             return
      bot_username = client.me.username
      user = await client.get_chat(chat_id=5749137933)

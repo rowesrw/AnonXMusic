@@ -72,7 +72,7 @@ async def song_downloader(client, message: Message):
             performer=host,
             thumb=thumb_name,
             duration=dur,
-            reply_markup=keyboard,
+            reply_markup=buttons,
         )
         await m.delete()
 

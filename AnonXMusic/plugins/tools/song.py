@@ -12,7 +12,7 @@ from pyrogram.types import Message, InputTextMessageContent
 from youtube_search import YoutubeSearch
 
 from AnonXMusic import app
-from string.filters import command
+from strings.filters import command
 
 def remove_if_exists(path):
     if os.path.exists(path):

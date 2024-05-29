@@ -69,7 +69,7 @@ async def song_downloader(client, message: Message):
         await m.delete()
 
     except Exception as e:
-        await m.edit(" error, wait for bot owner to fix \n\n {e}")
+        await m.edit(" error, wait for bot owner to fix")
         print(e)
 
     try:

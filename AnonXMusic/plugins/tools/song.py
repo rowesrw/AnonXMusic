@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InputTextMessageContent
 from youtube_search import YoutubeSearch
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AnonXMusic import app
 from strings.filters import command
 
@@ -40,6 +40,13 @@ async def song_downloader(client, message: Message):
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
         duration = results[0]["duration"]
+        buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["- Channel ."],
+                url=f"https://t.me/vc_xm",
+            )
+        ]
 
     except Exception as e:
         await m.edit("- لم يتم العثـور على نتائج ؟!\n- حـاول مجـدداً . . .")
@@ -51,7 +58,7 @@ async def song_downloader(client, message: Message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"𖡃 ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ @{app.username} "
+        rep = f"○ Uploader @{app.username} "
         host = str(info_dict["uploader"])
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
@@ -65,6 +72,7 @@ async def song_downloader(client, message: Message):
             performer=host,
             thumb=thumb_name,
             duration=dur,
+            reply_markup=buttons,
         )
         await m.delete()
 

@@ -42,10 +42,7 @@ async def song_downloader(client, message: Message):
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
         duration = results[0]["duration"]
-        buttons = InlineKeyboardButton(
-                text=["- Channel ."],
-                url=f"https://t.me/vc_xm",
-            )
+        buttons = InlineKeyboardButton(text=["- Channel ."], url=f"https://t.me/vc_xm",)
         
 
     except Exception as e:
@@ -68,11 +65,11 @@ async def song_downloader(client, message: Message):
         await message.reply_audio(
             audio=audio_file,
             caption=rep,
+            reply_markup=buttons,
             title=title,
             performer=host,
             thumb=thumb_name,
             duration=dur,
-            reply_markup=buttons,
         )
         await m.delete()
 

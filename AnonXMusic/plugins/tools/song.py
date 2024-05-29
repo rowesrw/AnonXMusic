@@ -43,7 +43,7 @@ async def song_downloader(client, message: Message):
         open(thumb_name, "wb").write(thumb.content)
         duration = results[0]["duration"]
         buttons = InlineKeyboardButton(
-                text=_["- Channel ."],
+                text=["- Channel ."],
                 url=f"https://t.me/vc_xm",
             )
         

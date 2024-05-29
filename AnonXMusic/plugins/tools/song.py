@@ -19,6 +19,8 @@ def remove_if_exists(path):
         os.remove(path)
 
 
+
+
 @app.on_message(command(["/song", "بحث", "/music"]))
 async def song_downloader(client, message: Message):
     query = " ".join(message.command[1:])
@@ -40,14 +42,11 @@ async def song_downloader(client, message: Message):
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
         duration = results[0]["duration"]
-        buttons = [
-        [
-            InlineKeyboardButton(
+        buttons = InlineKeyboardButton(
                 text=_["- Channel ."],
                 url=f"https://t.me/vc_xm",
             )
-        ]
-        ]
+        
 
     except Exception as e:
         await m.edit("- لم يتم العثـور على نتائج ؟!\n- حـاول مجـدداً . . .")
@@ -59,7 +58,7 @@ async def song_downloader(client, message: Message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"○ Uploader @{app.username} "
+        rep = f"𖡃 ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ @{app.username} "
         host = str(info_dict["uploader"])
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
@@ -73,12 +72,11 @@ async def song_downloader(client, message: Message):
             performer=host,
             thumb=thumb_name,
             duration=dur,
-            reply_markup=buttons,
         )
         await m.delete()
 
     except Exception as e:
-        await m.edit(" error, wait for bot owner to fix ")
+        await m.edit(" error, wait for bot owner to fix")
         print(e)
 
     try:

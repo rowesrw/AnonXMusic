@@ -8,9 +8,8 @@ from AnonXMusic import app
 
 @app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member)
 async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = ‎OWNER_ID 
-    if response.from_user.id == dev_id and response.new_chat_member.status == ChatMemberStatus.MEMBER:
-        info = await app.get_chat(dev_id)
+    if response.from_user.id == OWNER_ID and response.new_chat_member.status == ChatMemberStatus.MEMBER:
+        info = await app.get_chat(OWNR_ID)
         name = info.first_name
         username = info.username
         bio = info.bio

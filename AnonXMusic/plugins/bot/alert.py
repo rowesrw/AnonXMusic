@@ -20,7 +20,7 @@ async def checkAdded(_: Client, response: ChatMemberUpdated):
     user_id = response.from_user.id
     chat_id = response.chat.id
     username = response.from_user.first_name
-    OWNER_ID = ‎5749137933 # YOUR ID
+    OWNER_ID = ‎5749137933
     caption = f'‹ : تمت اضافة البوت الى المجموعه بواسطة {username} 💙'
     ownername = (await _.get_chat(OWNR_ID)).first_name
     markup = Markup([[Button(ownername, user_id = OWNER_ID)]])

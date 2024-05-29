@@ -2,12 +2,13 @@ from pyrogram import Client
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ChatMemberStatus
 import os
+from config import OWNER_ID
 from AnonXMusic import app 
 
 
 @app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member)
 async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = ‎5749137933 # حط ايديك هنا
+    dev_id = ‎OWNER_ID 
     if response.from_user.id == dev_id and response.new_chat_member.status == ChatMemberStatus.MEMBER:
         info = await app.get_chat(dev_id)
         name = info.first_name

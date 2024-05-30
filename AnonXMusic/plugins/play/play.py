@@ -23,7 +23,7 @@ from AnonXMusic.utils.inline import (
 from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
-from strings.filters import subscribed
+
 
 
         
@@ -43,7 +43,7 @@ from strings.filters import subscribed
             "/cvplayforce",
         ],""
     )
-    & subscribed & ~BANNED_USERS
+    & ~BANNED_USERS
 )
 @PlayWrapper
 async def play_commnd(

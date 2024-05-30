@@ -4,6 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import UserNotParticipant
 from config import ROWES
+from AnonXMusic import app 
 
 channel = "ROWES" # Your Channel
 async def subscription(_, __: Client, message: Message):

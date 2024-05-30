@@ -11,7 +11,7 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AarohiX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
@@ -38,11 +38,8 @@ async def call_dev(client: Client, message: Message):
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
-    user = await client.get_chat("R7_OX")
-    name = user.first_name
-    photo = await app.download_media(user.photo.big_file_id)
-    online_button = InlineKeyboardButton("{name}", url=f"https://t.me/{user.username}")
+    online_button = InlineKeyboardButton("𝗥𝗼𝗪𝗲𝗦", url=f"https://t.me/R7_OX")
     
-    await message.reply_photo(photo, caption =f" {name} -› @{user.username} .",
+    await message.reply_text(f"~ **تم إرسال النداء إلى مطور البوت\n\n-› 𝗥𝗼𝗪𝗲𝗦 -› @R7_OX .",
                              disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup([[online_button]]))

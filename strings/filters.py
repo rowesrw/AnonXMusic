@@ -3,10 +3,10 @@ from typing import List, Union
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import UserNotParticipant
-from config import ROWES
+
 from AnonXMusic import app 
 
-channel = "ROWES" # Your Channel
+channel = "vc_xm" 
 async def subscription(_, __: Client, message: Message):
     user_id = message.from_user.id
     try: await app.get_chat_member(channel, user_id)

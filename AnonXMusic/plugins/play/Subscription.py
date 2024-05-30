@@ -1,8 +1,11 @@
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
+from pyrogram.types import Message
+from pyrogram.types import InlineKeyboardMarkup as Markup, InlineKeyboardButton as Button
+from pyrogram.enums import ChatType
+from pyrogram.errors import UserNotParticipant
 from AnonXMusic import app
 from config import ROWES
+
 
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):

@@ -42,6 +42,12 @@
         "value": "",
         "required": true
       },
+      "ROWES": {
+        "description": "~  ضع قناة الاشتراك الاجباري ( لاتنسى رفع البوت مشرف في القناة ) .",
+        "value": "vc_xm",
+        "required": true
+        
+      },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "",

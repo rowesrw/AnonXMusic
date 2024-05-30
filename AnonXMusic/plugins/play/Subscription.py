@@ -6,30 +6,25 @@ from pyrogram.errors import UserNotParticipant
 from AnonXMusic import app
 from config import ROWES
 
+channel = "ROWES"
+async def subscription(_, __: Client, message: Message):
+    user_id = message.from_user.id
+    try: await app.get_chat_member(channel, user_id)
+    except UserNotParticipant: return False
+    return True
+    
+subscribed = filters.create(subscription)
 
-@app.on_message(filters.incoming & filters.private, group=-1)
-async def subscription(app: Client, msg: Message):
-    if not ROWES:
-        return
-    try:
-        try:
-            await app.get_chat_member(ROWES, msg.from_user.id)
-        except UserNotParticipant:
-            if ROWES.isalpha():
-                link = "https://t.me/" + ROWES
-            else:
-                chat_info = await app.get_chat(ROWES)
-                link = chat_info.invite_link
-            try:
-                await msg.reply(
-                    f"~︙عزيزي {msg.from_user.mention} \n~︙عليك الأشتراك في قناة البوت \n~︙قناة البوت : @{ROWES}.",
-                    disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("「 اشترك هنا 」", url=link)]
-                    ])
-                )
-                await msg.stop_propagation()
-            except ChatWriteForbidden:
-                pass
-    except ChatAdminRequired:
-        print(f"I m not admin in the MUST_JOIN chat {ROWES}!")
+@app.on_message(~subscribed)
+async def checker(_: Client, message: Message):
+    if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]: await message.reply()
+    user_id = message.from_user.id
+    user = message.from_user.first_name
+    markup = Markup([
+        [Button("- اشتراك -", url=f"https://t.me/{channel}")]
+    ])
+    await message.reply(
+        f"عذرًا عزيزي [{user}](tg://openmessage?user_id={user_id}) عليك الإشتراك بقناة البوت أولا.",
+        reply_markup = markup
+    )
+    

@@ -38,8 +38,11 @@ async def call_dev(client: Client, message: Message):
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton("𝗥𝗼𝗪𝗲𝗦", url=f"http://t.me/R7_OX")
-  
-    await message.reply_photo("https://telegra.ph/file/99853ed28bfc7bb217c94.jpg" ,caption = f"~ **تم إرسال النداء إلى مطور  البوت\n\n-› 𝗥𝗼𝗪𝗲𝗦 -› @R7_OX .",
+    user = await client.get_chat("R7_OX")
+    name = user.first_name
+    photo = await app.download_media(user.photo.big_file_id)
+    online_button = InlineKeyboardButton("{name}", url=f"https://t.me/{user.username}")
+    
+    await message.reply_photo(photo, caption =f" {name} -› @{user.username} .",
                              disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup([[online_button]]))

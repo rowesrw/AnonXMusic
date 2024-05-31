@@ -6,9 +6,9 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AnonXMusic import app
+from strings.filters import command 
 
-
-@app.on_message(filters.command("زخرفه"))
+@app.on_message(filters.command("زخرفه") & filters.group )
 async def zahrafa(c: Client, m: Message):
     text_list = m.text.split(None, 1)
     if len(text_list) < 2:

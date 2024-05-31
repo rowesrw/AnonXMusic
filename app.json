@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "25338488",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "95e5b91c9598fe65a9d73e80bebb8036",
         "required": true
       },
       "BOT_TOKEN": {
@@ -29,12 +29,12 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://fraonah:fraonah@devfraon.sg3sijf.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "",
+        "value": "5749137933",
         "required": true
       },
       "STRING_SESSION": {
@@ -42,9 +42,9 @@
         "value": "",
         "required": true
       },
-      "ROWES": {
-        "description": "~  ضع قناة الاشتراك الاجباري ( لاتنسى رفع البوت مشرف في القناة ) .",
-        "value": "vc_xm",
+      "BOT_USERNAME": {
+        "description": "يوزر البوت بدون @",
+        "value": "AIleXaBoT",
         "required": true
         
       },

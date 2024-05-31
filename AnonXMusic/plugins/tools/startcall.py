@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from AnonXMusic.utils.database import get_assistant
 from pyrogram.types import Message
 from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonXMusic.core.call import Dil
+from AnonXMusic.core.call import Anony 
 
 
 @app.on_message(filters.video_chat_started)

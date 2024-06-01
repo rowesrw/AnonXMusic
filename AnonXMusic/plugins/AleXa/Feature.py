@@ -1,7 +1,4 @@
-
-
 import asyncio
-
 import os
 import time
 import requests
@@ -40,9 +37,8 @@ from random import  choice, randint
 & filters.group
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس زد إي ميوزك\n
-⩹━★⊷⌯⌞ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱 ⌝⌯⊶★━⩺
-
+        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات السورس\n
+        
 ★قايمه مميزات سورس زد إي 
 
 ★ميزه ⦂ المطور بيجيب المطور البوت 
@@ -89,14 +85,12 @@ async def mmmezat(client, message):
 ★ميزه ⦂ انا فين+بتجلك جروب
 ★ميزه ⦂ الرابط+رابط مجموعه
 ★ميزه ⦂ فنان+اكتب اسم فنان و هتجبلك اغانيه
-★ميزه ⦂ اصدار+حول
-
-⩹━★⊷⌯⌞ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱 ⌝⌯⊶★━⩺""",
+★ميزه ⦂ اصدار+حول """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "★⌞ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱 ⌝⚡", url=f"https://t.me/Source_Ze"),                        
+                        "「 𝗥𝗼𝗪𝗲𝗦 」", url=f"https://t.me/R7_OX"),                        
                  ],[
                 InlineKeyboardButton(
                         "close", callback_data="close"),

@@ -18,7 +18,7 @@ from pyrogram.errors import MessageNotModified
 @app.on_message(
     command("اوامر")
 )
-async def cr_source(client: Client, message: Message):
+async def AleXa(client: Client, message: Message):
     await message.reply_photo(
       photo=f"https://telegra.ph/file/99853ed28bfc7bb217c94.jpg",
         caption=f"""**- قائمة الاوامر
@@ -85,7 +85,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="اوامر"), 
+                        "‹ الرئيسية ›", callback_data="AleXa"), 
                     
                 ]
             ]
@@ -125,7 +125,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="اوامر"), 
+                        "‹ الرئيسية ›", callback_data="AleXa"), 
                     
                 ]
             ]
@@ -161,7 +161,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="ch"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="اوامر"), 
+                        "‹ الرئيسية ›", callback_data="AleXa"), 
                     
                 ]
             ]
@@ -198,7 +198,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="adm"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="اوامر"), 
+                        "‹ الرئيسية ›", callback_data="AleXa"), 
                     
                 ]
             ]

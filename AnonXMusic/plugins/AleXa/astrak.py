@@ -16,7 +16,6 @@ subscribed = filters.create(subscription)
 
 @app.on_message(~subscribed)
 async def checker(_: Client, message: Message):
-    if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
     user_id = message.from_user.id
     user = message.from_user.first_name
     markup = Markup([

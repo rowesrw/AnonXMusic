@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from ZeMusic import YouTube, app
-from ZeMusic.utils.channelplay import get_channeplayCB
-from ZeMusic.utils.decorators.language import languageCB
-from ZeMusic.utils.stream.stream import stream
+from AnonXMusic import YouTube, app
+from AnonXMusic.utils.channelplay import get_channeplayCB
+from AnonXMusic.utils.decorators.language import languageCB
+from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 

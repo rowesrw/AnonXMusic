@@ -7,9 +7,8 @@ import config
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from strings.filters import command
-from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from ZeMusic import app
+from strings.filters import comXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import app
 
 import re
 import sys

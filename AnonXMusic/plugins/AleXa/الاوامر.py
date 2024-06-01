@@ -1,8 +1,8 @@
 import asyncio
 import os
 from pyrogram.types import CallbackQuery
-from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from ZeMusic import app
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import app
 import requests
 import pyrogram
 from pyrogram import Client, emoji 

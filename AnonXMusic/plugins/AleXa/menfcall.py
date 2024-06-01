@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
-from ZeMusic import app
+from AnonXMusic import app
 import asyncio
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from ZeMusic.core.call import Mody
-from ZeMusic.utils.database import *
+from AnonXMusic.core.call import Mody
+from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 
 @app.on_message(filters.command(["مين في الكول"], "")
@@ -13,7 +13,7 @@ from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 async def strcall(client, message):
     assistant = await group_assistant(mody,message.chat.id)
     try:
-        await assistant.join_group_call(message.chat.id, AudioPiped("ZeMusic/assets/call.mp3"), stream_type=StreamType().pulse_stream)
+        await assistant.join_group_call(message.chat.id, AudioPiped("AnonXMusic/assets/call.mp3"), stream_type=StreamType().pulse_stream)
         text="🔔 الاعضاء المتواجدين في الكول :\n\n"
         participants = await assistant.get_participants(message.chat.id)
         k =0

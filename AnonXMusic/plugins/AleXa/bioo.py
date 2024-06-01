@@ -1,12 +1,12 @@
 import asyncio
 import config
 from pyrogram import Client, filters
-from ZeMusic import app
+from AnonXMusic import app
 from config import OWNER_ID
-from ZeMusic.misc import SUDOERS
+from AnonXMusic.misc import SUDOERS
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMarkup, Message)
-from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 @app.on_message(filters.command(["زخارف","الزخارف","✨زخارف"], ""))

@@ -1,6 +1,6 @@
 import asyncio
 import random
-from ZeMusic import app
+from AnonXMusic import app
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from pyrogram import filters, Client

@@ -3,12 +3,12 @@ import pyrogram
 from pyrogram import Client, filters
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
-from ZeMusic import app
-from ZeMusic.utils.database import is_on_off
-from ZeMusic import app
+from AnonXMusic import app
+from AnonXMusic.utils.database import is_on_off
+from AnonXMusic import app
 import re
 import sys
 import os

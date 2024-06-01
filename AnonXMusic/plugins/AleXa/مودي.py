@@ -1,6 +1,6 @@
 import requests
 import json
-from ZeMusic import app
+from AnonXMusic import app
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import Message

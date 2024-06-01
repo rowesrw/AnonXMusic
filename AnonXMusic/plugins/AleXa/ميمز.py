@@ -2,7 +2,7 @@ import asyncio
 import config
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InputMediaVideo, InlineKeyboardMarkup, InlineKeyboardButton
-from ZeMusic import app
+from AnonXMusic import app
 
 
 @app.on_message(filters.command(["صرصار"], ""))

@@ -20,7 +20,7 @@ from pyrogram.errors import MessageNotModified
 )
 async def cr_source(client: Client, message: Message):
     await message.reply_photo(
-      photo=f"https://telegra.ph/file/41a777f089288f7ad2571.jpg",
+      photo=f"https://telegra.ph/file/99853ed28bfc7bb217c94.jpg",
         caption=f"""**- قائمة الاوامر
         
  — — — — — — — — — — 
@@ -47,7 +47,7 @@ async def cr_source(client: Client, message: Message):
                  ],[       
                        
                     InlineKeyboardButton(
-                        "‹ السورس ›", url=f"https://t.me/Source_Ze"),
+                        "‹ السورس ›", url=f"https://t.me/vc_xm"),
                 ],
 
             ]
@@ -85,7 +85,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="الاوامر"), 
+                        "‹ الرئيسية ›", callback_data="اوامر"), 
                     
                 ]
             ]
@@ -125,7 +125,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="الاوامر"), 
+                        "‹ الرئيسية ›", callback_data="اوامر"), 
                     
                 ]
             ]
@@ -161,7 +161,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="ch"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="الاوامر"), 
+                        "‹ الرئيسية ›", callback_data="اوامر"), 
                     
                 ]
             ]
@@ -198,7 +198,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
                         "‹ رجوع ›", callback_data="adm"), 
                 ],[
                     InlineKeyboardButton(
-                        "‹ الرئيسية ›", callback_data="الاوامر"), 
+                        "‹ الرئيسية ›", callback_data="اوامر"), 
                     
                 ]
             ]

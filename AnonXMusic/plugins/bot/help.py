@@ -12,7 +12,7 @@ from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
 
 
-@app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
+@app.on_message(filters.command(["/help","الاوامر"],"") & filters.private & filters.group & ~BANNED_USERS)
 @app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
 async def helper_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
@@ -43,13 +43,6 @@ async def helper_private(
             caption=_["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
         )
-
-
-@app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
-    await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
 
 
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)

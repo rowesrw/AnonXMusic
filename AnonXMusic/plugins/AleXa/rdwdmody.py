@@ -469,7 +469,7 @@ async def caesar(client: Client, message: Message):
         f"{a}")   
 
 vvhtxt = [
-" جتك اوهه م سامع ولا ايي 😹👻"
+" خدتك عليه 😹👻"
         ]
 
 @app.on_message(filters.command(["اي"], ""), group=200973)

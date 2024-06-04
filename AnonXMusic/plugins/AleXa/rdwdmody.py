@@ -6,7 +6,17 @@ from pyrogram.types import (InlineKeyboardButton,
 from pyrogram import filters, Client
 
 
+rwstxt = ["خبطك واحد امباليه"]
+@app.on_message(filters.command(["ساديو مانيه"], ""), group=73)
 
+async def caesar(client: Client, message: Message):
+
+      a = random.choice(rwstxt)
+
+      await message.reply(
+
+        f"{a}")
+  
 
 txt = [
 " هآي تع اشب شااي • 😹💔"

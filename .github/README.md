@@ -1,7 +1,7 @@
 ![Music-AleXA](https://telegra.ph/file/6d2c75e56f63a0668ec6e.jpg)
 #˛ 𝗠𝘂𝘀𝗶𝗖 𝗔𝗹𝗲𝗫𝗮 🇵🇸 .
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+SOURCE-STAR+AN+ADVANCE+BOT)](https://github.com/rowes-star)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+AleXa+source+AN+ADVANCE+BOT)](https://github.com/rowes-star)
 
 <p align="center">
     ─「 sᴜᴩᴩᴏʀᴛ 」─

@@ -1,6 +1,10 @@
-
 import asyncio
-from strings.filters import command
+import os
+import time
+import requests
+from pyrogram import filters
+import random
+from pyrogram import Client
 from AnonXMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
@@ -11,35 +15,84 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from pyrogram import Client, filters
+from strings.filters import command
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from random import  choice, randint
+from AnonXMusic import app
+from pyrogram import Client, filters
 from config import OWNER_ID
 
-@app.on_message(filters.command("نادي المطور", [".", ""]) & filters.group)
-async def call_dev(client: Client, message: Message):
-    chat = message.chat.id
-    gti = message.chat.title
-    link = await app.export_chat_invite_link(chat)
-    usr = await client.get_users(message.from_user.id)
-    chatusername = f"@{message.chat.username}"
-    user_id = message.from_user.id
-    user_ab = message.from_user.username
-    user_name = message.from_user.first_name
-    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await app.send_message(OWNER_ID, f"- قام {message.from_user.mention}\n"
-                                     f"- بمناداتك عزيزي المطور\n"
-                                     f"- الأيدي {user_id}\n"
-                                     f"- اليوزر @{user_ab}\n"
-                                     f"- ايدي المجموعة {message.chat.id}\n"
-                                     f"- الرابط {chatusername}",
-                                     reply_markup=reply_markup)
+def get_file_id(msg: Message):
+    if msg.media:
+        for message_type in (
+            "photo",
+            "animation",
+            "audio",
+            "document",
+            "video",
+            "video_note",
+            "voice",
+            # "contact",
+            # "dice",
+            # "poll",
+            # "location",
+            # "venue",
+            "sticker",
+        ):
+            obj = getattr(msg, message_type)
+            if obj:
+                setattr(obj, "message_type", message_type)
+                return obj
 
-    # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton("𝗥𝗼𝗪𝗲𝗦", url=f"https://t.me/R7_OX")
+
+@app.on_callback_query(filters.regex("devatari"))
+async def devatari(_, query: CallbackQuery):
+
     
-    await message.reply_text(f"~ تم إرسال النداء إلى مطور البوت\n\n-› 𝗥𝗼𝗪𝗲𝗦 -› @R7_OX .",
-                             disable_web_page_preview=True,
-                             reply_markup=InlineKeyboardMarkup([[online_button]]))
+    usm = await app.get_users(user_ids=[OWNER_ID])
+    mname = "usm.first_name"
+    musrnam = "usm.username"
+
+
+    chat = query.message.chat.id
+    gti = query.message.chat.title
+    chatusername = f"@{query.message.chat.username}"
+    chatprivatename = await app.export_chat_invite_link(chat)
+    user_id = query.from_user.id
+    user_ab = query.from_user.username
+    user_name = query.from_user.first_name
+    
+    await app.send_message(OWNER_ID, f"<b>≭︰قام ~ ⦗ {query.from_user.mention} ⦘ .\n</b>"
+                                     f"<b>≭︰بمناداتك عزيزي المطور .\n</b>"
+                                     f"<b>≭︰الأيدي ~ ⦗ {user_id} ⦘ .\n</b>"
+                                     f"<b>≭︰اليوزر ~ ⦗ @{user_ab} ⦘ .\n</b>"
+                                     f"<b>≭︰يوزر المجموعة العام ~ ⦗ {chatusername} ⦘ .\n</b>"
+                                     f"<b>≭︰يوزر المجموعة الخاص ~ ⦗ {chatprivatename} ⦘ .\n</b>"
+                                     f"<b>≭︰ايدي المجموعة ~ ⦗ {chat} ⦘ .\n</b>")
+
+
+    await query.message.reply_text(f"<b>≭︰تم إرسال استدعائك إلى مطور البوت .\n\n≭︰Black Team ~ ⦗ @vvizinn ⦘ .\n≭︰Black Updates ~ ⦗ @ExP_Black ⦘ .\n≭︰Dev ~ ⦗ @A1RTR ⦘ .</b>")
+
+@app.on_message(
+    command(["المطور"])
+    & filters.group
+  
+)
+async def rsexs(client, message):
+    usr = await app.get_chat("R7_OX")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"≭︰Dev Name ↬ ⦗ {name} ⦘\n≭︰Dev User ↬ ⦗ @{usr.username} ⦘\n≭︰Dev id ↬ ⦗ {usr.id} ⦘",  
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}"),
+                  ],[
+                    InlineKeyboardButton(
+                        "• استدعاء المطور •", callback_data="devatari"),
+                    
+                ],
+            ]
+        ),
+                             )

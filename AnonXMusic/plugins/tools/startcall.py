@@ -8,26 +8,22 @@ from AnonXMusic.core.call import Anony
 
 
 @app.on_message(filters.video_chat_started)
-async def brah(_, msg):
-       await msg.reply("‹ تم بدء المحادثة ›")
-
-
+async def brah(client, message):
+       await message.reply("↯︙تم تشغيل ↫ ⦗ المحادثة المرئية ⦘")
 @app.on_message(filters.video_chat_ended)
-async def brah2(_, msg):
-       await msg.reply("**‹ تم انهاء المحادثة ›**")
-
-
+async def brah2(client, message):
+       await message.reply("↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘")
 @app.on_message(filters.video_chat_members_invited)
-async def brah3(app :app, message:Message):
-           text = f"~ قام {message.from_user.mention} \n~ بدعوة :"
+async def fuckoff(client, message):
+           text = f"↯︙قام الشخص ↫ ⦗ {message.from_user.mention} ⦘"
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
-               text += f"[{user.first_name}](tg://user?id={user.id}) "
+               text += f"\n↯︙بدعوة شخص الى المحادثة المرئية ↫ ⦗ [{user.first_name}](tg://user?id={user.id}) ⦘"
                x += 1
              except Exception:
                pass
            try:
              await message.reply(f"{text}")
            except:
-             pass
+             pass  

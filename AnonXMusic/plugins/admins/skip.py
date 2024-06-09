@@ -1,4 +1,4 @@
-from AnonXMusic.plugins.play.filters import command
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 

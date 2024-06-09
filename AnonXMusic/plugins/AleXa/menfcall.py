@@ -7,7 +7,7 @@ from AnonXMusic.core.call import Anony
 from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 
-@app.on_message(filters.command(["مين في الكول"], "")
+@app.on_message(filters.command(["مين في الكول","مين فالكول"], "")
 & filters.group
 )
 async def strcall(client, message):
